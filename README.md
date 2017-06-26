@@ -1,15 +1,12 @@
 # ali-sms
-[![build status][travis-image]][travis-url]
-[travis-image]: https://travis-ci.org/tsq/ali-sms.svg?branch=master
-[travis-url]: https://travis-ci.org/tsq/ali-sms
-
+[![Build Status](https://travis-ci.org/tsq/ali-sms.svg?branch=master)](https://travis-ci.org/tsq/ali-sms)
 
 Nodejs SDK for [Aliyun SMS service](https://help.aliyun.com/product/44282.html)
 
 ## Install
 
 ```
-npm install ali-sms
+npm install ali-sms --save
 ```
 
 ## Usage
@@ -35,7 +32,7 @@ sms(config, (err, body) => {
 ## Config 
 
 param|type|description
-----|----|---|----
+----|----|--------------
 accessKeyID | string | access key id, get from aliyun
 accessKeySecret | string | access key secret, get from aliyun 
 paramString | object | ali sms param which you have defined on aliyun sms dashboard
@@ -43,8 +40,9 @@ recNum | array | phone numbers of users
 signName | string | ali sms param, get from aliyun sms dashboard
 templateCode | string | ali sms param, get from aliyun sms dashboard
 
-## Debug
+## Note
 
-```
-DEBUG=sms npm start
-```
+It's often you'll get some errors if the params are not valid. So please double check `accessKeyID`, `accessKeySecret`, `paramString`, `signName`, `templateCode` on Aliyun dashboard.
+
+## Official document for error solution
+https://help.aliyun.com/document_detail/52856.html
