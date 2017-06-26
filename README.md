@@ -19,10 +19,11 @@ const accessKeySecret = process.env.ALI_SMS_ACCESSKEYSECRET;
 const config = {
   accessKeyID       : accessKeyID,
   accessKeySecret   : accessKeySecret,
-  paramString       : {code: '123456'},
+  paramString       : {code: '123456', product: ''},
   recNum            : ['1891234567'],
   signName          : 'alibaba',
   templateCode      : 'SMS_28100008',
+  Version           : '2016-09-27'
 };
 sms(config, (err, body) => {
   console.log(err, body);
